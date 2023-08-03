@@ -16,7 +16,7 @@ const Home = () => {
             animate="show" 
             exit="hidden"
             className="h1">
-            Transformando Ideas <br/> Dentro{' '}
+            Transformando Ideas <br/> De{' '}
             <span className="text-accent">Realidad Digital</span>
           </motion.h1>
           <motion.p 
@@ -25,7 +25,7 @@ const Home = () => {
             animate="show" 
             exit="hidden"
             className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sapiente atque hic amet commodi, ad expedita voluptates exercitationem voluptas nobis delectus in, facere tenetur quae laboriosam? Incidunt nihil dolor sed!
+              Tomamos ideas de ficción entre cómics, películas y videojuegos para crear prototipos reales funcionales como una forma de inspirar a los jóvenes en el campo de la ciencia, la tecnología y la ingeniería.
           </motion.p>
           <div className="flex justify-center xl:hidden relative">
             <ProjectsBtn />
