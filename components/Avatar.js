@@ -5,8 +5,8 @@ const Avatar = () => {
     <div className="hidden xl:flex xl:max-w-none">
       <Image 
         src={'/tar.png'} 
-        width={537} 
-        height={498} 
+        width={737} 
+        height={678} 
         alt=""
         className="translate-z-0 w-full h-full"
         />
