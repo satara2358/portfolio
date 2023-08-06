@@ -204,7 +204,7 @@ const About = () => {
         </motion.div>
       </div>
     </div>
-  )
+  );
 };
 
 export default About;
