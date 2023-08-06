@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact, FaWordpress } from 'react-icons/fa';
 import { SiAdobephotoshop, SiAdobexd, SiFramer, SiNextdotjs } from 'react-icons/si';
 import { fadeIn } from "../../variants";
+import CountUp from "react-countup";
 
 const aboutData = [
   {
@@ -93,8 +94,29 @@ const About = () => {
         <Avatar/>
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        <div>text</div>
-        <div>
+        <div className="flex-1 flex flex-col justify-center">
+          <h2 className="h2">
+            Capting 
+            <span className="text-accent">
+              desing
+            </span>
+          </h2>
+          <p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+            Open http://localhost:3000 with your browser to see the result. You can start editing he page by modifying pages/index.js. The page auto-updates as you edit the file. API routes can be accessed on http://localhost:3000/api/hello. This endpoint can be edited in pages/api/hello.js.
+            The pages/api directory is mapped to /api/*. Files in this directory are treated as API routes instead of React pages.
+          </p>
+          <div>
+            <div>
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                  <CountUp start={0} end={10} duration={10}/>
+                </div>
+                <div>Años de Experiencia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" flex flex-col w-full xl:max-w-[48%] h-[480px]">
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
             {aboutData.map((item, itemIndex) => {
               return (
@@ -106,6 +128,29 @@ const About = () => {
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
+                </div>
+              )
+            })}
+          </div>
+          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+            {aboutData[index].info.map((item, itemIndex) => {
+              return(
+                <div 
+                  key={itemIndex}
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                >
+                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                  <div className="hidden md:flex">-</div>
+                  <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {item.icons?.map((icon, itemIndex) =>{
+                      return(
+                        <div className="text-2xl text-white">
+                          {icon}
+                        </div>
+                      )
+                    })}
+                  </div>
                 </div>
               )
             })}
